@@ -1,0 +1,81 @@
+<nav class="bg-pal1">
+    <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button-->
+                <button type="button"
+                    class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex flex-shrink-0 items-center">
+                    <svg width="79" height="27" viewBox="0 0 79 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.22 26.144C11.516 26.144 9.908 25.82 8.396 25.172C6.884 24.524 5.564 23.636 4.436 22.508C3.308 21.38 2.42 20.06 1.772 18.548C1.124 17.036 0.8 15.428 0.8 13.724C0.8 11.996 1.124 10.376 1.772 8.864C2.42 7.352 3.308 6.032 4.436 4.904C5.564 3.776 6.884 2.888 8.396 2.24C9.908 1.592 11.516 1.268 13.22 1.268C15.02 1.268 16.688 1.628 18.224 2.348C19.784 3.044 21.14 4.004 22.292 5.228L20.384 8.576C19.568 7.448 18.536 6.56 17.288 5.912C16.064 5.24 14.708 4.904 13.22 4.904C11.996 4.904 10.844 5.132 9.764 5.588C8.708 6.044 7.784 6.68 6.992 7.496C6.2 8.288 5.576 9.224 5.12 10.304C4.664 11.36 4.436 12.5 4.436 13.724C4.436 14.948 4.664 16.1 5.12 17.18C5.576 18.236 6.2 19.16 6.992 19.952C7.784 20.744 8.708 21.368 9.764 21.824C10.844 22.28 11.996 22.508 13.22 22.508C14.444 22.508 15.584 22.28 16.64 21.824C17.72 21.368 18.656 20.744 19.448 19.952L21.32 23.156C20.24 24.092 19.004 24.824 17.612 25.352C16.244 25.88 14.78 26.144 13.22 26.144ZM26.7341 26H22.7741L25.9421 18.62L26.3381 17.72L27.0221 16.172L30.3341 8.396L33.5021 0.979998V1.016L33.5381 0.979998L36.7061 8.396L40.0541 16.172L40.7021 17.72L41.0981 18.62L44.2661 26H42.6821H40.3061H31.8101L33.3221 22.4H38.7581L36.7061 17.576L33.5381 10.16L30.3341 17.576L26.7341 26ZM62.0568 26H50.0688L51.5808 22.4H62.0568V26ZM50.0688 26H46.4328V0.979998H50.0688V26ZM74.1658 0.979998H78.4498L75.7858 5.192L69.2698 15.452V26H65.6338V15.452L59.1538 5.192L56.4538 0.979998H60.7738L61.3857 1.988L67.4698 11.528L73.5178 1.988L74.1658 0.979998Z" fill="white"/>
+                        </svg>                        
+                </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                <!-- Profile dropdown -->
+                <div class="relative ml-3">
+                    <div>
+                        <button type="button"
+                            class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                            id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="h-8 w-8 rounded-full"
+                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt="">
+                        </button>
+                    </div>
+
+                    <!--
+              Dropdown menu, show/hide based on menu state.
+  
+              Entering: "transition ease-out duration-100"
+                From: "transform opacity-0 scale-95"
+                To: "transform opacity-100 scale-100"
+              Leaving: "transition ease-in duration-75"
+                From: "transform opacity-100 scale-100"
+                To: "transform opacity-0 scale-95"
+            -->
+                    <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                        role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                        <!-- Active: "bg-gray-100", Not Active: "" -->
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                            id="user-menu-item-0">Your Profile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                            id="user-menu-item-1">Settings</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
+                            id="user-menu-item-2">Sign out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+    </div>
+</nav>

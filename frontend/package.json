@@ -1,0 +1,20 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "caly, a prompt based calendar",
+  "main": "index.js",
+  "scripts": {
+    "tw-build": "npx tailwindcss -i ./static/css/src/input.css -o ./static/css/dist/output.css",
+    "rudra": "echo rudrashah"
+  },
+  "author": "Rudra Shah, Pankti Chawda, Maitree Patel",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "flowbite": "^1.6.5",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2"
+  }
+}
