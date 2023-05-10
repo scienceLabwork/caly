@@ -131,3 +131,16 @@ function app() {
         }
     }
 }
+
+function menuc(){
+    console.log("menuc");
+    document.querySelectorAll('[role="menu"]').forEach((e)=>{
+
+        if(e.classList.contains('hidden')){
+            e.classList.remove('hidden');
+        }
+        else{
+            e.classList.add('hidden');
+        }
+    });
+}
