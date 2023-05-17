@@ -2980,35 +2980,35 @@ fieldset:disabled .btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #D14D72;
+  border-color: #D14D72;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #5c636a;
-  border-color: #565e64;
+  background-color: #D14D72;
+  border-color: #D14D72;
 }
 
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: #fff;
-  background-color: #5c636a;
-  border-color: #565e64;
-  box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
+  background-color: #D14D72;
+  border-color: #D14D72;
+  box-shadow: 0 0 0 0.25rem rgba(157, 57, 89, 0.5);
 }
 
 .btn-check:checked + .btn-secondary,
 .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active,
 .show > .btn-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #565e64;
-  border-color: #51585e;
+  background-color: #D14D72;
+  border-color: #D14D72;
 }
 
 .btn-check:checked + .btn-secondary:focus,
 .btn-check:active + .btn-secondary:focus, .btn-secondary:active:focus, .btn-secondary.active:focus,
 .show > .btn-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
+  box-shadow: 0 0 0 0.25rem  rgba(157, 57, 89, 0.5);
 }
 
 .btn-secondary:disabled, .btn-secondary.disabled {
@@ -3284,34 +3284,34 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-secondary {
-  color: #6c757d;
-  border-color: #6c757d;
+  color: #D14D72;
+  border-color: #D14D72;
 }
 
 .btn-outline-secondary:hover {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #D14D72;
+  border-color: #D14D72;
 }
 
 .btn-check:focus + .btn-outline-secondary, .btn-outline-secondary:focus {
-  box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(157, 57, 89, 0.5);
 }
 
 .btn-check:checked + .btn-outline-secondary,
 .btn-check:active + .btn-outline-secondary, .btn-outline-secondary:active, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #D14D72;
+  border-color: #D14D72;
 }
 
 .btn-check:checked + .btn-outline-secondary:focus,
 .btn-check:active + .btn-outline-secondary:focus, .btn-outline-secondary:active:focus, .btn-outline-secondary.active:focus, .btn-outline-secondary.dropdown-toggle.show:focus {
-  box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(157, 57, 89, 0.5);
 }
 
 .btn-outline-secondary:disabled, .btn-outline-secondary.disabled {
-  color: #6c757d;
+  color: #D14D72;
   background-color: transparent;
 }
 
@@ -4027,7 +4027,7 @@ fieldset:disabled .btn {
   display: block;
   padding: 0.5rem 1rem;
   font-weight: 400;
-  color: #5954cb;
+  color: #D14D72;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -4039,7 +4039,7 @@ fieldset:disabled .btn {
 }
 
 .nav-link:hover, .nav-link:focus {
-  color: #3631a1;
+  color: #D14D72;
 }
 
 .nav-link.disabled {
@@ -4093,7 +4093,7 @@ fieldset:disabled .btn {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #5954cb;
+  background-color: #D14D72;
 }
 
 .nav-fill > .nav-link,
@@ -4551,11 +4551,11 @@ fieldset:disabled .btn {
 }
 
 .navbar-light .navbar-brand {
-  color: #5954cb;
+  color: #D14D72;
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: #5954cb;
+  color: #D14D72;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -4563,7 +4563,7 @@ fieldset:disabled .btn {
 }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-  color: #5954cb;
+  color: #D14D72;
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -4572,7 +4572,7 @@ fieldset:disabled .btn {
 
 .navbar-light .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #5954cb;
+  color: #D14D72;
 }
 
 .navbar-light .navbar-toggler {
@@ -4591,7 +4591,7 @@ fieldset:disabled .btn {
 .navbar-light .navbar-text a,
 .navbar-light .navbar-text a:hover,
 .navbar-light .navbar-text a:focus {
-  color: #5954cb;
+  color: #D14D72;
 }
 
 .navbar-dark .navbar-brand {
@@ -12140,4 +12140,14 @@ STYLE SWITCHER FOR DEMO
 
 #style-switch h4, #style-switch .h4 {
   color: #495057;
+}
+
+.btn-rounded{
+  font-size: 16px;
+  width: 150px;
+  /* padding: 20px; */
+  padding: 15px 52px;
+  border: solid;
+  border-radius: 1rem;
+  
 }
