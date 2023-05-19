@@ -10,6 +10,7 @@
   "author": "Rudra Shah, Pankti Chawda, Maitree Patel",
   "license": "ISC",
   "dependencies": {
+    "@material/web": "^1.0.0-pre.8",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.14",
