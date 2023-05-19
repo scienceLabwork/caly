@@ -3225,11 +3225,6 @@ input[type="range"]::-ms-fill-lower {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
 .text-green-600 {
   --tw-text-opacity: 1;
   color: rgb(5 122 85 / var(--tw-text-opacity));
@@ -3238,11 +3233,6 @@ input[type="range"]::-ms-fill-lower {
 .text-green-800 {
   --tw-text-opacity: 1;
   color: rgb(3 84 63 / var(--tw-text-opacity));
-}
-
-.text-indigo-400 {
-  --tw-text-opacity: 1;
-  color: rgb(141 162 251 / var(--tw-text-opacity));
 }
 
 .text-indigo-600 {
@@ -3820,9 +3810,9 @@ input[type="range"]::-ms-fill-lower {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
-.hover\:text-indigo-800:hover {
+.hover\:text-indigo-500:hover {
   --tw-text-opacity: 1;
-  color: rgb(66 56 157 / var(--tw-text-opacity));
+  color: rgb(104 117 245 / var(--tw-text-opacity));
 }
 
 .hover\:text-primary:hover {
@@ -4842,41 +4832,14 @@ input[type="range"]::-ms-fill-lower {
   .sm\:pr-0 {
     padding-right: 0px;
   }
-}
 
-@media (min-width: 768px) {
-  .md\:h-auto {
-    height: auto;
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
-  .md\:flex-row {
-    flex-direction: row;
-  }
-
-  .md\:justify-start {
-    justify-content: flex-start;
-  }
-
-  .md\:p-4 {
-    padding: 1rem;
-  }
-
-  .md\:pt-48 {
-    padding-top: 12rem;
-  }
-
-  .md\:text-left {
-    text-align: left;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  .sm\:leading-6 {
+    line-height: 1.5rem;
   }
 }
 
