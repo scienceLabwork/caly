@@ -14,6 +14,7 @@ module.exports = {
         'palpink':'#EE84D4',
         'pal1':'#D14D72',
         'pal2':'#FFABAB',
+        'pal3':'#B22F59',
       }
     }
   },
@@ -22,5 +23,6 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('flowbite/plugin'),
     require("tw-elements/dist/plugin.cjs"),
+    require('flowbite/plugin')
   ],
 };
