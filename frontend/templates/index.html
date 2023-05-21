@@ -1,333 +1,103 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Caly</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <!-- Swiper slider-->
-    <link rel="stylesheet" href="/css/dist/vendor/swiper/swiper-bundle.min.css">
-    <!-- Modal Video-->
-    <link rel="stylesheet" href="/css/dist/vendor/modal-video/css/modal-video.min.css">
-    <!-- Google fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,600,800&amp;display=swap">
-    <!-- Device Mockup-->
-    <link rel="stylesheet" href="/css/dist/device-mockups.css">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="/css/dist/style.default.css" id="theme-stylesheet">
-  </head>
-  <body>
-    <!-- navbar-->
-    <header class="header">
-      <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="navbar">
-        <div class="container"><a class="navbar-brand" href="index.html"><svg width="79" height="27" viewBox="0 0 79 27" fill="#D14D72" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.22 26.144C11.516 26.144 9.908 25.82 8.396 25.172C6.884 24.524 5.564 23.636 4.436 22.508C3.308 21.38 2.42 20.06 1.772 18.548C1.124 17.036 0.8 15.428 0.8 13.724C0.8 11.996 1.124 10.376 1.772 8.864C2.42 7.352 3.308 6.032 4.436 4.904C5.564 3.776 6.884 2.888 8.396 2.24C9.908 1.592 11.516 1.268 13.22 1.268C15.02 1.268 16.688 1.628 18.224 2.348C19.784 3.044 21.14 4.004 22.292 5.228L20.384 8.576C19.568 7.448 18.536 6.56 17.288 5.912C16.064 5.24 14.708 4.904 13.22 4.904C11.996 4.904 10.844 5.132 9.764 5.588C8.708 6.044 7.784 6.68 6.992 7.496C6.2 8.288 5.576 9.224 5.12 10.304C4.664 11.36 4.436 12.5 4.436 13.724C4.436 14.948 4.664 16.1 5.12 17.18C5.576 18.236 6.2 19.16 6.992 19.952C7.784 20.744 8.708 21.368 9.764 21.824C10.844 22.28 11.996 22.508 13.22 22.508C14.444 22.508 15.584 22.28 16.64 21.824C17.72 21.368 18.656 20.744 19.448 19.952L21.32 23.156C20.24 24.092 19.004 24.824 17.612 25.352C16.244 25.88 14.78 26.144 13.22 26.144ZM26.7341 26H22.7741L25.9421 18.62L26.3381 17.72L27.0221 16.172L30.3341 8.396L33.5021 0.979998V1.016L33.5381 0.979998L36.7061 8.396L40.0541 16.172L40.7021 17.72L41.0981 18.62L44.2661 26H42.6821H40.3061H31.8101L33.3221 22.4H38.7581L36.7061 17.576L33.5381 10.16L30.3341 17.576L26.7341 26ZM62.0568 26H50.0688L51.5808 22.4H62.0568V26ZM50.0688 26H46.4328V0.979998H50.0688V26ZM74.1658 0.979998H78.4498L75.7858 5.192L69.2698 15.452V26H65.6338V15.452L59.1538 5.192L56.4538 0.979998H60.7738L61.3857 1.988L67.4698 11.528L73.5178 1.988L74.1658 0.979998Z" fill="pal1"/>
-          </svg> </a>
-          <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-              <!--<li class="nav-item"><a class="nav-link link-scroll active" href="#hero">Home <span class="sr-only"></span></a></li>
-              <li class="nav-item"><a class="nav-link link-scroll" href="#about">About</a></li>
-              <li class="nav-item"><a class="nav-link link-scroll" href="#services">Services</a></li>
-              <li class="nav-item"><a class="nav-link link-scroll" href="#testimonials">Testimonials</a></li> -->
-              <li class="list-inline-item mb-2 mb-lg-0"><a class="btn btn-secondary btn-lg btn-rounded px-2" href="#!">Getting started</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- Hero Section-->
-    <section class="hero bg-top py-5" id="hero" style="background: url(images/banner-4.png) no-repeat; background-size: 100% 80%">
-      <div class="container py-5" align = "middle">
-        <div class="row py-5 " >
-          <!--div class="col-lg-5 "> -->
-          <div class="col-lg-5 "> 
-            
-            <h2 text-align="center">Transform your life with caly </h2>
-            <!--<p class="my-4 text-muted">Empower your days, transform your life with caly.</p>-->
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item mb-2 mb-lg-0"><a class="btn btn-secondary btn-lg btn-rounded px-2" href="#!">Getting started</a></li>
-              <!--<li class="list-inline-item mb-2 mb-lg-0"><a class="btn btn-secondary btn-lg px-4" href="#!"> <i class="fab fa-google-play me-3"></i>Google Play</a></li>
-              <li class="list-inline-item"><a class="btn btn-secondary btn-lg px-4" href="#!"> <i class="fab fa-app-store me-3"></i>App Store</a></li>
-              --></ul>
-          </div>
-          <div class="col-lg-6 ml-auto">
-            <div class="device-wrapper mx-auto float-end">
-                <img class="img-fluid" src="images/mobile.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="bg-center py-0" id="about" style="background: url(images/service-bg.svg) no-repeat; background-size: cover">
-      <section class="about py-0">
-        <div class="container">
-          <p class="h6 text-uppercase text-primary">What is it all about?</p>
-          <h2 class="mb-5">Track your time and expenses</h2>
-          <div class="row pb-5 gy-4">
-            <div class="col-lg-4 col-md-6">
-              <!-- Services Item-->
-              <div class="card border-0 shadow rounded-lg py-4 text-start">
-                <div class="card-body p-5">
-                  <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#ff904e">
-                    <use xlink:href="#document-saved-1"> </use>
-                  </svg>
-                  <h3 class="h4 my-4">Online Marketing</h3>
-                  <p class="text-sm text-muted mb-0">Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor incididunt ut labore.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <!-- Services Item-->
-              <div class="card border-0 shadow rounded-lg py-4 text-start">
-                <div class="card-body p-5">
-                  <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#39f8d2">
-                    <use xlink:href="#map-marker-1"> </use>
-                  </svg>
-                  <h3 class="h4 my-4">Track your move </h3>
-                  <p class="text-sm text-muted mb-0">Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor incididunt ut labore.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <!-- Services Item-->
-              <div class="card border-0 shadow rounded-lg py-4 text-start">
-                <div class="card-body p-5">
-                  <svg class="svg-icon svg-icon-light" style="width:60px;height:60px;color:#8190ff">
-                    <use xlink:href="#arrow-target-1"> </use>
-                  </svg>
-                  <h3 class="h4 my-4">Market analysis</h3>
-                  <p class="text-sm text-muted mb-0">Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor incididunt ut labore.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="with-pattern-1 py-5" id="services">
-        <div class="container py-5">
-          <div class="row align-items-center mb-5 gy-5">
-            <div class="col-lg-6"><img class="img-fluid w-100 px-lg-5" src="images/objects.svg" alt=""></div>
-            <div class="col-lg-6">
-              <h2>The Best Business Solutions Guide for You</h2>
-              <p class="text-muted">Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore dolore magna aliqua enim ad minim veniam quis nostrud exercitation.</p>
-              <button class="btn btn-primary js-modal-btn" data-video-id="B6uuIHpFkuo"><i class="fas fa-play-circle me-2"></i>Play video</button>
-            </div>
-          </div>
-          <div class="row align-items-center gy-5">
-            <div class="col-lg-6">
-              <h2>Make your own success as simple you clap</h2>
-              <p class="text-muted">Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore dolore magna aliqua enim ad minim veniam quis nostrud exercitation.</p>
-              <ul class="list-check">
-                <li class="text-muted mb-2">Various Analysis Options</li>
-                <li class="text-muted mb-2">Page Load Details (time, size, number of requests)</li>
-                <li class="text-muted mb-2">Waterfall, Video and Report History</li>
-              </ul>
-              <button class="btn btn-primary js-modal-btn" data-video-id="B6uuIHpFkuo"><i class="fas fa-play-circle me-2"></i>Play video</button>
-            </div>
-            <div class="col-lg-6">
-              <div class="row gy-4">
-                <div class="col-lg-6 col-sm-6">
-                  <!-- Services Item-->
-                  <div class="card border-0 shadow rounded-lg text-start px-2">
-                    <div class="card-body px py-5">
-                      <svg class="svg-icon" style="width:40px;height:40px;color:#ff904e">
-                        <use xlink:href="#document-saved-1"> </use>
-                      </svg>
-                      <h3 class="h5 my-3">Online Marketing</h3>
-                      <p class="text-sm mb-0 text-muted">Lorem ipsum dolor amet consectetur adipisicing.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                  <!-- Services Item-->
-                  <div class="card border-0 shadow rounded-lg text-start px-2">
-                    <div class="card-body px py-5">
-                      <svg class="svg-icon" style="width:40px;height:40px;color:#39f8d2">
-                        <use xlink:href="#map-marker-1"> </use>
-                      </svg>
-                      <h3 class="h5 my-3">Track your move </h3>
-                      <p class="text-sm mb-0 text-muted">Lorem ipsum dolor amet consectetur adipisicing.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                  <!-- Services Item-->
-                  <div class="card border-0 shadow rounded-lg text-start px-2">
-                    <div class="card-body px py-5">
-                      <svg class="svg-icon" style="width:40px;height:40px;color:#8190ff">
-                        <use xlink:href="#arrow-target-1"> </use>
-                      </svg>
-                      <h3 class="h5 my-3">Market analysis</h3>
-                      <p class="text-sm mb-0 text-muted">Lorem ipsum dolor amet consectetur adipisicing.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                  <!-- Services Item-->
-                  <div class="card border-0 shadow rounded-lg text-start px-2">
-                    <div class="card-body px py-5">
-                      <svg class="svg-icon" style="width:40px;height:40px;color:#ff634b">
-                        <use xlink:href="#sorting-1"> </use>
-                      </svg>
-                      <h3 class="h5 my-3">Full Settings</h3>
-                      <p class="text-sm mb-0 text-muted">Lorem ipsum dolor amet consectetur adipisicing.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
-    <section class="p-0" id="testimonials" style="background: url(images/testimonials-bg.png) no-repeat; background-size: 40% 100%; background-position: left center">
-      <div class="container text-center">
-        <p class="h6 text-uppercase text-primary">Testimonials</p>
-        <h2 class="mb-5">What Our Users Says?</h2>
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="swiper testimonials-slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide h-auto">
-                  <div class="mx-3 mx-lg-5 my-5 pt-3">
-                    <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                      <div class="card-body index-forward pt-5 rounded-lg">
-                        <div class="testimonial-img"><img class="rounded-circle" src="images/avatar-1.jpg" alt="" width="100"/></div>
-                        <p class="lead text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        <h5 class="mb-0">Sarah Hudson</h5>
-                        <p class="text-primary mb-0 text-sm">Tech Developer</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide h-auto">
-                  <div class="mx-3 mx-lg-5 my-5 pt-3">
-                    <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                      <div class="card-body index-forward pt-5 rounded-lg">
-                        <div class="testimonial-img"><img class="rounded-circle" src="images/avatar-2.png" alt="" width="100"/></div>
-                        <p class="lead text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        <h5 class="mb-0">Frank Smith</h5>
-                        <p class="text-primary mb-0 text-sm">Tech Developer</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide h-auto">
-                  <div class="mx-3 mx-lg-5 my-5 pt-3">
-                    <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                      <div class="card-body index-forward pt-5 rounded-lg">
-                        <div class="testimonial-img"><img class="rounded-circle" src="images/avatar-1.jpg" alt="" width="100"/></div>
-                        <p class="lead text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        <h5 class="mb-0">Sarah Hudson</h5>
-                        <p class="text-primary mb-0 text-sm">Tech Developer</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide h-auto">
-                  <div class="mx-3 mx-lg-5 my-5 pt-3">
-                    <div class="card shadow rounded-lg px-4 py-5 px-lg-5 with-pattern bg-white border-0">
-                      <div class="card-body index-forward pt-5 rounded-lg">
-                        <div class="testimonial-img"><img class="rounded-circle" src="images/avatar-2.png" alt="" width="100"/></div>
-                        <p class="lead text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        <h5 class="mb-0">Frank Smith</h5>
-                        <p class="text-primary mb-0 text-sm">Tech Developer</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><a class="scroll-top-btn" id="scrollTop" href="#!"><i class="fas fa-long-arrow-alt-up"></i></a>
-    <footer class="with-pattern-1 position-relative pt-5">
-      <div class="container py-5">
-        <div class="row gy-4">
-          <div class="col-lg-3"><img class="mb-4" src="images/logo.svg" alt="" width="110">
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </div>
-          <div class="col-lg-2">
-            <h2 class="h5 mb-4">Quick Links</h2>
-            <div class="d-flex">
-              <ul class="list-unstyled d-inline-block me-4 mb-0">
-                <li class="mb-2"><a class="footer-link" href="#!">History</a></li>
-                <li class="mb-2"><a class="footer-link" href="#!">About us</a></li>
-                <li class="mb-2"><a class="footer-link" href="#!">Contact us</a></li>
-                <li class="mb-2"><a class="footer-link" href="#!">Services</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <h2 class="h5 mb-4">Services</h2>
-            <div class="d-flex">
-              <ul class="list-unstyled me-4 mb-0">
-                <li class="mb-2"><a class="footer-link" href="#!">History</a></li>
-                <li class="mb-2"><a class="footer-link" href="#!">About us</a></li>
-                <li class="mb-2"><a class="footer-link" href="#!">Contact us</a></li>
-                <li class="mb-2"><a class="footer-link" href="#!">Services</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <h2 class="h5 mb-4">Contact Info</h2>
-            <ul class="list-unstyled me-4 mb-3">
-              <li class="mb-2 text-muted">728  Ocello Street, San Diego, California. </li>
-              <li class="mb-2"><a class="footer-link" href="tel:619-851-4132">619-851-4132</a></li>
-              <li class="mb-2"><a class="footer-link" href="mailto:Nova@example.com">Nova@example.com</a></li>
-            </ul>
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item"><a class="social-link" href="#!"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="#!"><i class="fab fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-              <li class="list-inline-item"><a class="social-link" href="#!"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="copyrights">       
-        <div class="container text-center py-4">
-          <p class="mb-0 text-muted text-sm">&copy; 2021, Your company. Template by <a href="https://bootstrapious.com/p/app-landing-page" class="text-reset">Bootstrapious</a>.</p>
-          <!-- If you want to remove the backlink, please purchase the Attribution-Free License. See details in readme.txt or license.txt. Thanks!-->
-        </div>
-      </div>
-    </footer>
-    <!-- JavaScript files-->
-    <script src="/css/dist/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/css/dist/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="/css/dist/vendor/modal-video/js/modal-video.js"></script>
-    <script src="js/front.js"></script>
-    <script>
-      // ------------------------------------------------------- //
-      //   Inject SVG Sprite - 
-      //   see more here 
-      //   https://css-tricks.com/ajaxing-svg-sprite/
-      // ------------------------------------------------------ //
-      function injectSvgSprite(path) {
-      
-          var ajax = new XMLHttpRequest();
-          ajax.open("GET", path, true);
-          ajax.send();
-          ajax.onload = function(e) {
-          var div = document.createElement("div");
-          div.className = 'd-none';
-          div.innerHTML = ajax.responseText;
-          document.body.insertBefore(div, document.body.childNodes[0]);
-          }
-      }
-      // this is set to BootstrapTemple website as you cannot 
-      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
-      // while using file:// protocol
-      // pls don't forget to change to your domain :)
-      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
-      
-    </script>
-    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  </body>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Caly</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+    <!-- Font Awesome if you need it
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	-->
+  <link href="/css/dist/output.css" rel="stylesheet">
+  <link href="/css/dist/main.css" rel="stylesheet">
+	<!--Replace with your tailwind.css once created-->
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+
+	<!-- Animation CSS-->
+	<!--<style>		
+		 /* ----------------------------------------------
+		 * Generated by Animista
+		 * w: http://animista.net, t: @cssanimista
+		 * ---------------------------------------------- */
+		 
+		.slide-in-bottom{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both}
+		.slide-in-bottom-h1{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .5s both}
+		.slide-in-bottom-subtitle{-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .75s both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .75s both}
+		.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both}
+		.bounce-top-icons{-webkit-animation:bounce-top .9s 1s both;animation:bounce-top .9s 1s both}
+		
+		@-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+		@-webkit-keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}@keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}
+		@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+				
+	</style>-->
+
+</head>
+
+
+<body class="leading-normal tracking-normal text-gray-900" style="font-family: 'Source Sans Pro', sans-serif;">
+
+
+
+<div class="h-screen pb-14 bg-right bg-cover" style="background-image:url('bg.svg');">
+	<!--Nav-->
+	<div class="w-full container mx-auto p-6">
+			
+		<div class="w-full flex items-center justify-between">
+			<a class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"  href="#"> 
+        <svg width="79" height="27" viewBox="0 0 79 27" fill="#D14D72" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.22 26.144C11.516 26.144 9.908 25.82 8.396 25.172C6.884 24.524 5.564 23.636 4.436 22.508C3.308 21.38 2.42 20.06 1.772 18.548C1.124 17.036 0.8 15.428 0.8 13.724C0.8 11.996 1.124 10.376 1.772 8.864C2.42 7.352 3.308 6.032 4.436 4.904C5.564 3.776 6.884 2.888 8.396 2.24C9.908 1.592 11.516 1.268 13.22 1.268C15.02 1.268 16.688 1.628 18.224 2.348C19.784 3.044 21.14 4.004 22.292 5.228L20.384 8.576C19.568 7.448 18.536 6.56 17.288 5.912C16.064 5.24 14.708 4.904 13.22 4.904C11.996 4.904 10.844 5.132 9.764 5.588C8.708 6.044 7.784 6.68 6.992 7.496C6.2 8.288 5.576 9.224 5.12 10.304C4.664 11.36 4.436 12.5 4.436 13.724C4.436 14.948 4.664 16.1 5.12 17.18C5.576 18.236 6.2 19.16 6.992 19.952C7.784 20.744 8.708 21.368 9.764 21.824C10.844 22.28 11.996 22.508 13.22 22.508C14.444 22.508 15.584 22.28 16.64 21.824C17.72 21.368 18.656 20.744 19.448 19.952L21.32 23.156C20.24 24.092 19.004 24.824 17.612 25.352C16.244 25.88 14.78 26.144 13.22 26.144ZM26.7341 26H22.7741L25.9421 18.62L26.3381 17.72L27.0221 16.172L30.3341 8.396L33.5021 0.979998V1.016L33.5381 0.979998L36.7061 8.396L40.0541 16.172L40.7021 17.72L41.0981 18.62L44.2661 26H42.6821H40.3061H31.8101L33.3221 22.4H38.7581L36.7061 17.576L33.5381 10.16L30.3341 17.576L26.7341 26ZM62.0568 26H50.0688L51.5808 22.4H62.0568V26ZM50.0688 26H46.4328V0.979998H50.0688V26ZM74.1658 0.979998H78.4498L75.7858 5.192L69.2698 15.452V26H65.6338V15.452L59.1538 5.192L56.4538 0.979998H60.7738L61.3857 1.988L67.4698 11.528L73.5178 1.988L74.1658 0.979998Z" fill="#D14D72"/>
+          </svg>    
+				 <!--<svg class="h-8 fill-current text-indigo-600 pr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm-5.6-4.29a9.95 9.95 0 0 1 11.2 0 8 8 0 1 0-11.2 0zm6.12-7.64l3.02-3.02 1.41 1.41-3.02 3.02a2 2 0 1 1-1.41-1.41z"/></svg> APP
+         --></a>
+			
+			<!--<div class="flex w-1/2 justify-end content-center">		
+				<a class="inline-block text-blue-300 no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4" data-tippy-content="@twitter_handle" href="https://twitter.com/intent/tweet?url=#">
+					<svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+				</a>
+				<a class="inline-block text-blue-300 no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 " data-tippy-content="#facebook_id" href="https://www.facebook.com/sharer/sharer.php?u=#">
+					<svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
+				</a>
+			</div>-->
+      <button class="bg-pal1 hover:bg-pal1 text-white text-md py-4 px-4 rounded-xl btn-lg"> Get Started </button> 
+			
+		</div>
+
+	</div>
+
+	<!--Main-->
+	<div class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+		
+		<!--Left Col-->
+		<div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+			<h1 class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">Main Hero Message to sell your app</h1>
+			<p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">Sub-hero message, not too long and not too short. Make it just right!</p>
+			<div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
+        <button class="bg-pal1 hover:bg-pal1 text-white text-md py-4 px-4 rounded-xl btn-lg">Get Started</button> 
+        
+			</div>
+
+		</div>
+		
+		<!--Right Col-->
+		<div class="w-full xl:w-3/5 py-6 overflow-y-hidden">
+			<img class="w-5/6 mx-auto lg:mr-0 slide-in-bottom" src="devices.svg">
+		</div>
+		
+	</div>
+	
+
+</div>
+
+
+  <!-- jQuery if you need it
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  -->
+
+</body>
+
 </html>
