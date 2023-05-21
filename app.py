@@ -1,6 +1,8 @@
 from flask import *
 import time
 import os
+import sqlite3 as sql
+from enc import encrypt, decrypt
 
 app = Flask(__name__,static_url_path='', static_folder='frontend/static',template_folder='frontend/templates')
 port = int(os.environ.get("PORT", 5000))
@@ -20,28 +22,17 @@ def register():
 
 @app.route('/postrud', methods=['POST', 'GET'])
 def postrud():
-    #Database Structure users(email TEXT, fname TEXT, password TEXT, tstamp TEXT, ex1 TEXT, ex2 TEXT);
-    msg = ''
-    if request.method == 'GET':
-        try:
-            email = request.form['email']
-            fname = request.form['fname']
-            password = request.form['password']
-            tstamp = time.strftime('%Y-%m-%d %H:%M:%S')
-            with sql.connect("users.sqlite") as con:
-                cur = con.cursor()
-                cur.execute("INSERT INTO users (email,fname,password,tstamp,ex1,ex2) VALUES (?,?,?,?,?,?)",(email,fname,password,tstamp,'0','0') )
-                con.commit()
-                msg = "Record successfully added"
-                print(msg)
-        except:
-            con.rollback()
-            msg = "error in insert operation"
-            return msg
-            print(msg)
-        finally:
-            return msg
-            con.close()
+    if request.method == 'POST':
+        conn = sql.connect('users.sqlite')
+        cur = conn.cursor()
+        email = request.form['email']
+        fname = request.form['name']
+        password = request.form['password']
+        password = encrypt(password)
+        tstamp = time.strftime('%Y-%m-%d %H:%M:%S')
+        cur.execute("INSERT INTO users (email,fname,password,tstamp) VALUES (?,?,?,?)",(email,fname,password,tstamp))
+        conn.commit()
+        msg = "Record successfully added"
     return msg
 
 @app.route('/calender')
