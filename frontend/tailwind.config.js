@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         'palcream':'#F9D3AA',
+        'pallight':'#f66ca5',
         'palpink':'#EE84D4',
         'pal1':'#D14D72',
         'pal2':'#FFABAB',
