@@ -3174,8 +3174,16 @@ input[type="range"]::-ms-fill-lower {
   --tw-gradient-to: #9089fc var(--tw-gradient-to-position);
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
 .bg-clip-padding {
   background-clip: padding-box;
+}
+
+.bg-right {
+  background-position: right;
 }
 
 .fill-\[\#afafaf\] {
@@ -3397,6 +3405,10 @@ input[type="range"]::-ms-fill-lower {
 
 .pb-0 {
   padding-bottom: 0px;
+}
+
+.pb-14 {
+  padding-bottom: 3.5rem;
 }
 
 .pb-2 {
@@ -4366,6 +4378,11 @@ input[type="range"]::-ms-fill-lower {
   background-color: rgb(178 47 89 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-pink-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 126 184 / var(--tw-bg-opacity));
+}
+
 .hover\:fill-\[\#8b8b8b\]:hover {
   fill: #8b8b8b;
 }
@@ -4723,6 +4740,10 @@ input[type="range"]::-ms-fill-lower {
 
 .focus-visible\:outline-indigo-600:focus-visible {
   outline-color: #5850EC;
+}
+
+.focus-visible\:outline-pink-400:focus-visible {
+  outline-color: #F17EB8;
 }
 
 .active\:bg-\[\#cacfd1\]:active {
