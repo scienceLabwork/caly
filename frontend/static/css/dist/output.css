@@ -2335,8 +2335,8 @@ input[type="range"]::-ms-fill-lower {
   min-width: 64px;
 }
 
-.max-w-2xl {
-  max-width: 42rem;
+.max-w-3xl {
+  max-width: 48rem;
 }
 
 .max-w-\[200px\] {

@@ -14,5 +14,9 @@ body,html {
     box-shadow: 0px 0px 10px 0px #D14D72;
 }
 
-
-  
+.bg-img{
+    background-image: url("/images/bg1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
