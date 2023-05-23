@@ -91,8 +91,20 @@ def calendar():
         return render_template('calendar.html',avtarurl=session['image'])
     return redirect(url_for('index'))
 
-@app.route('/forgot')
+@app.route('/forgot', methods=['POST', 'GET'])
 def forgot():
+    if request.method == 'POST':
+        conn = sql.connect('users.sqlite')
+        cur = conn.cursor()
+        email = request.form['email']
+        cur.execute("SELECT email FROM users WHERE email = ?",(email,))
+        data = cur.fetchone()
+        if data is None:
+            flash('Email does not exist', 'error')
+            return render_template('forgot.html',color='red')
+        else:
+            flash('Reset Mail link sent to your mail id successully', 'success')
+            return render_template('forgot.html',color='green')
     return render_template('forgot.html')
 
 @app.route('/logout')
