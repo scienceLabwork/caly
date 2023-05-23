@@ -29,6 +29,10 @@ def register():
         return redirect(url_for('calendar'))
     return render_template('register.html')
 
+@app.route('/termsandconditions')
+def termsandconditions():
+    return render_template('termsandconditions.html')
+
 @app.route('/postrud', methods=['POST', 'GET'])
 def postrud():
     if request.method == 'POST':
