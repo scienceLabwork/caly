@@ -2099,6 +2099,10 @@ input[type="range"]::-ms-fill-lower {
   height: 1rem;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -2732,6 +2736,10 @@ input[type="range"]::-ms-fill-lower {
   justify-content: space-evenly;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
@@ -2776,6 +2784,10 @@ input[type="range"]::-ms-fill-lower {
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .truncate {
@@ -3112,11 +3124,6 @@ input[type="range"]::-ms-fill-lower {
 .bg-blue-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(195 221 253 / var(--tw-bg-opacity));
-}
-
-.bg-blue-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(26 86 219 / var(--tw-bg-opacity));
 }
 
 .bg-gray-100 {
@@ -3483,10 +3490,6 @@ input[type="range"]::-ms-fill-lower {
 
 .pb-7 {
   padding-bottom: 1.75rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
 }
 
 .pl-16 {
@@ -3930,6 +3933,11 @@ input[type="range"]::-ms-fill-lower {
   color: rgb(155 28 28 / var(--tw-text-opacity));
 }
 
+.text-slate-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -4054,6 +4062,10 @@ input[type="range"]::-ms-fill-lower {
 .ring-black {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
+}
+
+.ring-black\/5 {
+  --tw-ring-color: rgb(0 0 0 / 0.05);
 }
 
 .ring-gray-900\/10 {
@@ -5336,6 +5348,10 @@ input[type="range"]::-ms-fill-lower {
   }
 }
 
+:is(.dark .dark\:divide-slate-200\/5) > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgb(226 232 240 / 0.05);
+}
+
 :is(.dark .dark\:border) {
   border-width: 1px;
 }
@@ -5404,6 +5420,11 @@ input[type="range"]::-ms-fill-lower {
   background-color: rgb(209 77 114 / var(--tw-bg-opacity));
 }
 
+:is(.dark .dark\:bg-slate-800) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
 :is(.dark .dark\:bg-transparent) {
   background-color: transparent;
 }
@@ -5459,6 +5480,16 @@ input[type="range"]::-ms-fill-lower {
 :is(.dark .dark\:text-primary-500) {
   --tw-text-opacity: 1;
   color: rgb(101 144 213 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:text-slate-200) {
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:text-slate-400) {
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:text-white) {
