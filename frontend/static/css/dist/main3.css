@@ -30,12 +30,12 @@
     
     .wrapper {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 60rem;
-        min-height: 100vh;
+        justify-content: top;
+        align-items: top;
+        max-width: 100%;
+        min-height: 30rem;
         margin-inline: auto;
-        padding: 2rem;
+        padding: 1rem;
     }
     
  
@@ -49,15 +49,19 @@
         display: flex;
         flex-direction: column;
         gap: var(--space-05);
+        margin-top: none;
+        width: 30.5rem;
+
         /* margin: var(--space-05); */
         
-        justify-content: space-between;
-        overflow: hidden;
+        /* justify-content: space-between; */
+        /* overflow: hidden; */
     }
     
     .list__item--primary {
         display: flex;
         flex-direction: column;
+        margin-top: none;
         border-radius: var(--space-025);
         border: 1px solid var(--bg-accent);
         background: linear-gradient(to right, var(--bg-accent), #fff);
@@ -70,10 +74,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        min-height: 3.25rem;
-        min-width: 5.5rem;
+        min-height: 5.25rem;
+        min-width: 12.5rem;
         padding: 1.5rem;
-        margin-inline: var(--space-05);
+        
     }
     
     .text--primary {
