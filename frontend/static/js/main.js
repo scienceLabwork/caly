@@ -60,12 +60,17 @@ function app() {
         openEventModal: false,
 
         readjson(){
-            //read data.json
-            fetch('data.json')
+            fetch('/js/data.json')
             .then(response => response.json())
             .then(data => {
+                console.log(data.event_date);
+                data.event_date = new Date(data.event_date);
                 console.log(data);
-                this.events = data;
+                this.events.push({
+                    event_date: data.event_date,
+                    event_title: data.event_title,
+                    event_theme: data.event_theme
+                })
             });
         },
 
