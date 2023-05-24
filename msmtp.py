@@ -2,7 +2,7 @@ import smtplib, ssl
 from email.message import EmailMessage
 from config import mailidpass
 
-def sendmail(umail,uname,resetlink):
+def sendmail(umail,resetlink):
     try:
         port = 465  # For SSL
         smtp_server = "smtpout.secureserver.net"
@@ -13,7 +13,7 @@ def sendmail(umail,uname,resetlink):
         msg = EmailMessage()
         msg.set_content(
 f"""
-Dear {uname},
+Dear User,
 
 We have received a request to reset your password for your caly account. We understand that forgetting passwords happens to the best of us, so we're here to help you regain access to your account.
 
@@ -45,6 +45,3 @@ Team Caly
         return "Sent"
     except:
         return "Error"
-
-tlink = "samplelinkwouldbehere"
-sendmail("panktichawda06@gmail.com","Pankti",tlink)
