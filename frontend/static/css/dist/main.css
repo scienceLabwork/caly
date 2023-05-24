@@ -3,6 +3,7 @@ body,html {
     padding: 0;
 }
 
+<<<<<<< HEAD
 .text-5xl {
     font-size: 3.25rem;
     line-height: 3.5rem;
@@ -24,3 +25,22 @@ padding-bottom: 4rem;
 
 
 
+=======
+* {
+    box-sizing: border-box;
+}
+
+.bg-11{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D14D72;
+    box-shadow: 0px 0px 10px 0px #D14D72;
+}
+
+.bg-img{
+    background-image: url("/images/bg1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+>>>>>>> refs/remotes/origin/main

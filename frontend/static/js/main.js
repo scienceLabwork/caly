@@ -11,24 +11,26 @@ function app() {
         blankdays: [],
         days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
 
-        events: [{
-                event_date: new Date(2023, 3, 1),
-                event_title: "April Fool's Day",
-                event_theme: 'blue'
-            },
+        // events: [{
+        //         event_date: new Date(2023, 3, 1),
+        //         event_title: "April Fool's Day",
+        //         event_theme: 'blue'
+        //     },
 
-            {
-                event_date: new Date(2023, 9, 2),
-                event_title: "Birthday",
-                event_theme: 'red'
-            },
+        //     {
+        //         event_date: new Date(2023, 9, 2),
+        //         event_title: "Birthday",
+        //         event_theme: 'red'
+        //     },
 
-            {
-                event_date: new Date(2020, 3, 16),
-                event_title: "Upcoming Event",
-                event_theme: 'green'
-            }
-        ],
+        //     {
+        //         event_date: new Date(2020, 3, 16),
+        //         event_title: "Upcoming Event",
+        //         event_theme: 'green'
+        //     }
+        // ],
+        events: [],
+        
         event_title: '',
         event_date: '',
         event_theme: 'blue',
@@ -56,6 +58,16 @@ function app() {
         ],
 
         openEventModal: false,
+
+        readjson(){
+            //read data.json
+            fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                this.events = data;
+            });
+        },
 
         initDate() {
             let today = new Date();
@@ -116,7 +128,7 @@ function app() {
             let last = new Date(this.year, this.month, 0).getDate();
 
             let lmon = [];
-            console.log(last, blankdaysArray.length);
+            // console.log(last, blankdaysArray.length);
             for(var i=(last+1)-blankdaysArray.length; i<=last; i++){
                 lmon.push(i);
             }       
