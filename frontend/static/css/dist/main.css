@@ -46,79 +46,9 @@ body,html {
       background-color: var(--bgcolor);
   }
 
+
   
-  body,
-  html {
-    width: 100%;
-      height: 100%;
-  }
   
-  body, p {
-      color: var(--txtcolor-sec); 
-      font: 400 1rem/1.625rem "Open Sans", sans-serif;
-  }
-  
-  p {
-      margin-bottom: 18px;
-  }
-  
-  h1 {
-      margin-bottom: 28px;
-      color: var(--txtcolor-prim);
-      font-weight: 700;
-      font-size: 2.75rem;
-      line-height: 3.5rem;
-      font-family: "Inter";
-      letter-spacing: -0.6px;
-  }
-  
-  h2 {
-      margin-bottom: 24px;
-      color: var(--txtcolor-prim);
-      font-weight: 700;
-      font-size: 2.125rem;
-      line-height: 2.875rem;
-      font-family: "Inter";
-      letter-spacing: -0.4px;
-  }
-  
-  h3 {
-      margin-bottom: 20px;
-      color: var(--txtcolor-prim);
-      font-weight: 700;
-      font-size: 1.75rem;
-      line-height: 2.375rem;
-      font-family: "Inter";
-      letter-spacing: -0.2px;
-  }
-  
-  h4 {
-      margin-bottom: 16px;
-      color: var(--txtcolor-prim);
-      font-weight: 700;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-family: "Inter";
-      letter-spacing: -0.1px;
-  }
-  
-  h5 {
-      margin-bottom: 14px;
-      color: var(--txtcolor-prim);
-      font-weight: 700;
-      font-size: 1.25rem;
-      line-height: 1.625rem;
-      font-family: "Inter";
-  }
-  
-  h6 {
-      margin-bottom: 12px;
-      color: var(--txtcolor-prim);
-      font-weight: 700;
-      font-size: 1rem;
-      line-height: 1.375rem;
-      font-family: "Inter";
-  }
   
   .container-prim,
   .container-sec,
@@ -245,13 +175,24 @@ body,html {
   
     }
       
-
+.text-5xl {
+        font-size: 3.25rem;
+        line-height: 3.5rem;
+}
   
      
-   
+.mb-10 {
+    margin-bottom: 5.5rem;
+  }
 
   
-  
+.pb-6 {
+    padding-bottom: 5.5rem;
+}
+
+.pb-7 {
+    padding-bottom: 4rem;
+}
     
   
   

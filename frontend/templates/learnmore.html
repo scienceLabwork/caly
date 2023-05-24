@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caly ~ Smart calendar</title>
+  <link href="/css/dist/output.css" rel="stylesheet">
+  <link href="/css/dist/main.css" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body class="leading-normal tracking-normal text-gray-900">
+  <div class="relative isolate">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>   
+    </div>
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#f66ca5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <nav class="w-full flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class=" w-full flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Caly</span>
+            <img src="/images/calypink.svg" alt="calylogo">
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="/index" class="rounded-md bg-pal1 px-3.5 py-2.5 text-md text-white shadow-sm hover:bg-pink-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400">Back</a>
+        </div>
+      </nav>
+    </div>
+    <div class="bg-white">
+      <!--<div class="mx-auto max-w-4xl lg:text-center">
+        <p class="mt-2 mb-0 text-5xl font-bold text-pal1">Learn more</p>
+    </div>-->
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-6xl lg:text-center">
+            <p class="mt-6 mr-2 text-lg font-semibold leading-8 text-gray-600">An online calendar management system is a digital tool or software designed to help individuals, teams, and organizations efficiently manage their schedules, appointments, events, and tasks. It provides a centralized platform accessible through the internet, allowing users to create, edit, and view their calendars from various devices such as computers, smartphones, or tablets. 
+              <br>Here's a detailed description of the features and functionality typically found in an online calendar management system:</p>
+          </div>
+          <div class="mx-auto mt-16 max-w-7xl sm:mt-20 lg:mt-24">
+            <dl class="grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:gap-y-16">
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-pal1">
+                    <i class="fa-regular fa-calendar" style="color: #ffffff;"></i>
+                  </div>
+                  Calendar Creation and Customization:
+                </dt>
+                <dd class="mt-2 mr-6 text-base leading-7 text-gray-600">Users can create multiple calendars, each representing different aspects of their lives or specific projects. They can customize calendar settings, including colors, time zones, working hours, and privacy settings, according to their preferences.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-pal1">
+                    <i class="fa-solid fa-list" style="color: #ffffff;"></i>
+                  </div>
+                  Scheduling and Event Management:
+                </dt>
+                <dd class="mt-2 mr-6 text-base leading-7 text-gray-600">Users can schedule appointments, meetings, events, and reminders directly on the calendar. They can specify details such as event title, location, start and end times, recurrence patterns, and attendee lists. The system support features like notifications and integration with other scheduling tools.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-pal1">
+                    <i class="fa-regular fa-bell" style="color: #ffffff;"></i>
+                  </div>
+                  Reminders and Notifications:
+                </dt>
+                <dd class="mt-2 mr-6 text-base leading-7 text-gray-600">The system can send reminders and notifications via email, pop-up alerts, or mobile push notifications to ensure that users stay informed about upcoming events and deadlines. Users can set reminders for specific times or configure advanced notifications to receive alerts a certain amount of time before an event.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-pal1">
+                    <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i>
+                  </div>
+                  Multiple Views and Filtering:
+                </dt>
+                <dd class="mt-2 mr-6 text-base leading-7 text-gray-600">Online calendar management systems offer various views to visualize events and schedules effectively. Common views include month and year, allowing users to switch between different time perspectives.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-pal1">
+                    <svg class="h-6 w-64 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>
+                  </div>
+                  Recurring Events:
+                </dt>
+                <dd class="mt-2 mr-6 text-base leading-7 text-gray-600">Online calendars allow users to set up recurring events, such as weekly team meetings or monthly reminders. Users can specify the frequency, duration, and end date for these recurring events, saving time and effort in manually creating individual instances.</dd>
+              </div>
+              <div class="relative pl-16">
+                <dt class="text-base font-semibold leading-7 text-gray-900">
+                  <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-pal1">
+                    <i class="fa-solid fa-mobile-screen-button" style="color: #ffffff;"></i>
+                  </div>
+                  Mobile Accessibility: 
+                </dt>
+                <dd class="mt-2 mr-6 text-base leading-7 text-gray-600">As many people rely on smartphones for their daily activities, a mobile-friendly interface or dedicated mobile applications are often available for online calendar management systems. This ensures that users can access and manage their calendars on the go, making it convenient and accessible from anywhere.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>       
+</body>
+
+</html>
+
+
+
+
+
+
+
+

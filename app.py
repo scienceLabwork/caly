@@ -33,6 +33,10 @@ def register():
 def termsandconditions():
     return render_template('termsandconditions.html')
 
+@app.route('/learnmore')
+def laernmore():
+    return render_template('learnmore.html')
+
 @app.route('/postrud', methods=['POST', 'GET'])
 def postrud():
     if request.method == 'POST':
