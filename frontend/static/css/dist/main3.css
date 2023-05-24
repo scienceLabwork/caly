@@ -50,7 +50,7 @@
         flex-direction: column;
         gap: var(--space-05);
         /* margin: var(--space-05); */
-        margin-top: 2rem;
+        
         justify-content: space-between;
         overflow: hidden;
     }
@@ -105,9 +105,7 @@
         transform: translateY(-6rem);
     }
     
-    .icon {
-        color: #ccc;
-    }
+  
     
     .list__item--primary:hover .list__container--secondary {
         height: 5.75rem;
@@ -122,7 +120,7 @@
         transform: translateY(0);
     }
     
-    .list__container--primary :checked + label .icon {
+    .list__container--primary :checked + label  {
         color: var(--icon-clr);
         transform: scale(1.5);
         transition: all 266ms var(--easing1);
