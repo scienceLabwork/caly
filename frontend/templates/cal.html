@@ -40,87 +40,21 @@
 							</button>
 						</div>
 					</div>
-
-					<div class="w-full h-9/10 bg-white">
-						<!--<div class="w-6 h-6 items-center justify-center cursor-pointer text-center leading-none rounded-full mt-8 opacity-30"> 
-						svdsvd</div>-->
-						<div class="wrapper">
-							<!-- <article class="todo__container"> -->
-							  <section class="content">
-								<ul class="list__container list__container--primary">
-								  <li class="list__item list__item--primary">
-									<!-- <input type="checkbox" id="list-input1" class="list-input1"> -->
-									<label for="list-input1" class="list-input-label">
-									  <span class="text--primary">Groceries
-										<span>+</span>
-									  </span>
-				
-									</label>
-						  
-									<ul class="list__container list__container--secondary">
-									  <li class="list__item list__item--secondary">
-										<span class="text--secondary">3 tomatoes</span>
-									  </li>
-									  <!--<li class="list__item list__item--secondary">
-										<span class="text--secondary">1 bunch of cherries</span>
-									  </li>
-									  <li class="list__item list__item--secondary">
-										<span class="text--secondary">6 onions</span>
-									  </li>
-									  <li class="list__item list__item--secondary">
-										<span class="text--secondary">3 heads of garlic</span>
-									  </li>
-									  <li class="list__item list__item--secondary">
-										<span class="text--secondary">1 bag spring mix</span>
-									  </li>-->
-									</ul>
-								  </li>
-								  
-								  <li class="list__item list__item--primary">
-									<!-- <input type="checkbox" id="list-input2" class="list-input2"> -->
-									<label for="list-input2" class="list-input-label">
-									  <span class="text--primary">Cancel gym membership</span>
-									  <span class="icon"><i class="fas fa-check"></i></span>
-									</label>
-					  
-								  </li>
-								  <li class="list__item list__item--primary">
-									<!-- <input type="checkbox" id="list-input3" class="list-input3"> -->
-									<label for="list-input3" class="list-input-label">
-									  <span class="text--primary">Code todo list
-										<!--<span>+</span>-->
-									  </span>
-									  <span class="icon"><i class="fas fa-check"></i></span>
-									</label>
-									<!--<ul class="list__container list__container--secondary">
-									  <li class="list__item list__item--secondary">
-										<span class="text--secondary">modern CSS</span>
-									  </li>
-									  <li class="list__item list__item--secondary">
-										<span class="text--secondary">Flex or Grid</span>
-									  </li>
-									  <li class="list__item list__item--secondary">
-										<span class="text--secondary">maybe some JS</span>
-									  </li>
-									  <li class="list__item list__item--secondary">
-										<span class="text--secondary">variables</span>
-									  </li>
-									  <li class="list__item list__item--secondary">
-										<span class="text--secondary">and logical properties</span>
-									  </li>
-									</ul>-->
-								  </li>
-								</ul>
-							  </section>
-							<!-- </article> -->
+					<div class="overflow-y-scroll w-full h-40 p-2 relative bg-white dark:bg-slate-800 ring-1 ring-black/5 flex flex-col divide-y dark:divide-slate-200/5">
+						
+					{% for i in range(30)%}
+						<div class="flex bg-pal2 items-center gap-4 mb-4 p-4 rounded-xl" id="{{i+1}}">
+						  <h1>{{i+1}}</h1>
+						  <div class="flex flex-col">
+							<strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Title</strong>
+							<span class="text-slate-900 text-sm font-medium dark:text-slate-400">Time</span>
 						  </div>
-					</div>
+						</div>
+					{% endfor %}
 
-<<<<<<< HEAD
-					<input type="text" class="mb-0 pb-0 w-full h-22 border-2 border-pal1 bg-white text-blue-500 focus:outline-none" placeholder="Enter your text here">
-=======
+					  </div>
 					<!-- <input type="text" class="bottom-0 w-full h-22 border-2 border-pal1 bg-white text-blue-500 focus:outline-none" placeholder="Enter your text here"> -->
-					<form action="/addevent" method="POST">
+					<form action="/addevent" method="POST" class="bottom-0 left-0 w-auto">
 						<div class="relative m-1">
 							<input type="search" id="default-search" name="prompt" class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your event details..." required>
 							<button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-pal1 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -130,7 +64,6 @@
 							</button>
 						</div>
 					</form>
->>>>>>> refs/remotes/origin/main
 
 				</div>
 
@@ -167,7 +100,7 @@
 									<div @click="showEventModal(date)" x-text="date"
 										class="inline-flex w-6 h-6 items-center justify-center cursor-pointer text-center leading-none rounded-full transition ease-in-out duration-100 mt-8 opacity-30">
 									</div>
-									<div style="height: 80px;" class="overflow-y-auto mt-1">
+									<div style="height: 60px;" class="overflow-y-auto mt-1">
 										<!-- <div 
 											class="absolute top-0 right-0 mt-2 mr-2 inline-flex items-center justify-center rounded-full text-sm w-6 h-6 bg-gray-700 text-white leading-none"
 											x-show="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"
@@ -199,7 +132,7 @@
 										class="inline-flex w-6 h-6 items-center justify-center cursor-pointer text-center leading-none rounded-full transition ease-in-out duration-100 mt-8"
 										:class="{'bg-pal2 text-white': isToday(date) == true, 'text-gray-700 hover:bg-blue-200': isToday(date) == false }">
 									</div>
-									<div style="height: 80px;" class="overflow-y-auto mt-1">
+									<div style="height: 60px;" class="overflow-y-auto mt-1">
 										<!-- <div 
 											class="absolute top-0 right-0 mt-2 mr-2 inline-flex items-center justify-center rounded-full text-sm w-6 h-6 bg-gray-700 text-white leading-none"
 											x-show="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"
@@ -227,7 +160,7 @@
 									<div @click="showEventModal(date)" x-text="date"
 										class="inline-flex w-6 h-6 items-center justify-center cursor-pointer text-center leading-none rounded-full transition ease-in-out duration-100 mt-8 opacity-30"> 
 									</div>
-									<div style="height: 80px;" class="overflow-y-auto mt-1">
+									<div style="height: 60px;" class="overflow-y-auto mt-1">
 										<!-- <div 
 											class="absolute top-0 right-0 mt-2 mr-2 inline-flex items-center justify-center rounded-full text-sm w-6 h-6 bg-gray-700 text-white leading-none"
 											x-show="events.filter(e => e.event_date === new Date(year, month, date).toDateString()).length"
@@ -327,5 +260,10 @@
 			</div>
 		</div>
 		<script src="https://kit.fontawesome.com/dbd64c2e56.js" crossorigin="anonymous"></script>
+		<script>
+			let today = new Date();
+			let dd = String(today.getDate()).padStart(2, '0');		
+			document.getElementById(dd).scrollIntoView();
+		</script>
 	</div>
 </div>
