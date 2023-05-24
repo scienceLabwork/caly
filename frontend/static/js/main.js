@@ -1,6 +1,7 @@
 const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
     'November', 'December'
 ];
+
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 function app() {
@@ -63,14 +64,16 @@ function app() {
             fetch('/js/data.json')
             .then(response => response.json())
             .then(data => {
-                console.log(data.event_date);
-                data.event_date = new Date(data.event_date);
-                console.log(data);
-                this.events.push({
-                    event_date: data.event_date,
-                    event_title: data.event_title,
-                    event_theme: data.event_theme
-                })
+                let len = Object.keys(data).length;
+                console.log(len);
+                for (let i = 1; i < len+1; i++) {
+                    data[i].event_date = new Date(data[i].event_date);
+                    this.events.push({
+                        event_date: data[i].event_date,
+                        event_title: data[i].event_title,
+                        event_theme: data[i].event_theme
+                    })
+                }
             });
         },
 
