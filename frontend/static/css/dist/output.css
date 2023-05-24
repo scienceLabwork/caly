@@ -3460,6 +3460,10 @@ input[type="range"]::-ms-fill-lower {
   padding-bottom: 1.5rem;
 }
 
+.pb-7 {
+  padding-bottom: 1.75rem;
+}
+
 .pl-16 {
   padding-left: 4rem;
 }
