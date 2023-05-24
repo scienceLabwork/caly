@@ -1,5 +1,5 @@
 <div class="sans-serif bg-white">
-	<div x-data="app()" x-init="[initDate(), getNoOfDays()]" x-cloak>
+	<div x-data="app()" x-init="[initDate(), getNoOfDays(), readjson()]" x-cloak>
 		<div class="lg:hidden hidden" role="dialog" aria-modal="true">
 
 		</div>
@@ -116,7 +116,21 @@
 						  </div>
 					</div>
 
+<<<<<<< HEAD
 					<input type="text" class="mb-0 pb-0 w-full h-22 border-2 border-pal1 bg-white text-blue-500 focus:outline-none" placeholder="Enter your text here">
+=======
+					<!-- <input type="text" class="bottom-0 w-full h-22 border-2 border-pal1 bg-white text-blue-500 focus:outline-none" placeholder="Enter your text here"> -->
+					<form action="/addevent" method="POST">
+						<div class="relative m-1">
+							<input type="search" id="default-search" name="prompt" class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your event details..." required>
+							<button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-pal1 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+								<!-- <i class="fa-solid fa-paper-plane-top" style="color: #ffffff;"></i> -->
+								<!-- <i class="fa-solid fa-paper-plane-top"></i> -->
+								<i class="fa-regular fa-paper-plane"></i>
+							</button>
+						</div>
+					</form>
+>>>>>>> refs/remotes/origin/main
 
 				</div>
 
@@ -312,6 +326,6 @@
 				</div>
 			</div>
 		</div>
-
+		<script src="https://kit.fontawesome.com/dbd64c2e56.js" crossorigin="anonymous"></script>
 	</div>
 </div>

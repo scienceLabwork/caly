@@ -1,5 +1,12 @@
 {
-    "event_date": "new Date(2023, 3, 1)",
-    "event_title": "April Fool's Day",
-    "event_theme": "blue"
+    "1": {
+        "event_date": "05/05/2023",
+        "event_title": "April Fool's Day",
+        "event_theme": "blue"
+    },
+    "2": {
+        "event_date": "05/06/2023",
+        "event_title": "Rudra's Day",
+        "event_theme": "blue"
+    }
 }

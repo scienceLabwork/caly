@@ -119,6 +119,7 @@ def postlud():
 @app.route('/calendar')
 def calendar():
     if 'email' in session:
+        print(session['image'])
         return render_template('calendar.html',avtarurl=session['image'])
     return redirect(url_for('index'))
 
