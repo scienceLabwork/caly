@@ -28,6 +28,7 @@ def nltoschedule(sent):
     fdate = ""
     ftime = ""
     minlen = []
+    color = ""
 
     for sen in doc.ents:
         if(sen.label_ == "CARDINAL"):
@@ -43,6 +44,8 @@ def nltoschedule(sent):
             minlen.append(sen.start_char)
 
     for l in preprocess(sent):
+        if(l[1]=="NN" or l[1]=="JJ"):
+            color = l[0]
         if(l[1]=="CD"):
             if(":" in l[0] and time==""):
                 time = l[0]
@@ -65,11 +68,12 @@ def nltoschedule(sent):
             l.append(x[0])
         i+=1
     
-    print(l)
     l = ' '.join(l[::-1])
     if(date+" "+time!=" "):
         whole = parser.parse(date+" "+time)
         fdate = str(whole.strftime("%d %a %b %Y"))
         ftime = str(whole.strftime("%I:%M %p"))
 
-    return l,fdate,ftime
+    return l,fdate,ftime,color
+
+print(nltoschedule("Classes on Instrumental Science Today at 12:56 in blue"))

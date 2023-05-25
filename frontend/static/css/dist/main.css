@@ -49,6 +49,13 @@ padding-bottom: 4rem;
     height: 39.7rem;
 }
 
+.red {
+    background-color: rgb(251 213 213);
+}
+
+.green {
+    background-color: #b8e5df;
+}
 .h-15 {
     height: 88vh;
   }
@@ -83,3 +90,7 @@ padding-bottom: 4rem;
       line-height: 1.25rem;
     }
   }
+
+.h-120{
+    
+}

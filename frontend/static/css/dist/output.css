@@ -2145,6 +2145,10 @@ input[type="range"]::-ms-fill-lower {
   height: 2.25rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .h-\[1\.125rem\] {
   height: 1.125rem;
 }
@@ -2299,6 +2303,10 @@ input[type="range"]::-ms-fill-lower {
 
 .w-9 {
   width: 2.25rem;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .w-\[1\.125rem\] {
@@ -2841,6 +2849,10 @@ input[type="range"]::-ms-fill-lower {
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .rounded-\[0\.25rem\] {
