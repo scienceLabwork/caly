@@ -75,6 +75,10 @@ def termsandconditions():
 def laernmore():
     return render_template('learnmore.html')
 
+@app.route('/profile')
+def profilex():
+    return render_template('profile.html')
+
 @app.route('/postrud', methods=['POST', 'GET'])
 def postrud():
     if request.method == 'POST':
