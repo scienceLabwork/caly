@@ -135,7 +135,7 @@ def calendar():
         # jsonc(l,fdate)
         conn = sql.connect('users.sqlite')
         cur = conn.cursor()
-        cur.execute("SELECT etitle,edate,etime FROM eve WHERE emp1 = ?",(session['email'],))
+        cur.execute("SELECT etitle,edate,etime,emp2 FROM eve WHERE emp1 = ?",(session['email'],))
         data = cur.fetchall()
         sampledict = dict()
         for i in range(len(data)):
@@ -151,6 +151,12 @@ def calendar():
             temp["event_date"] = fdate
             temp["event_title"] = l
             temp["event_theme"] = "red"
+            temp["event_month"] = ""
+            if(data[i][3]==None or data[i][3]==""):
+                temp["event_theme"] = "red"
+            else:
+                temp["event_theme"] = data[i][3]
+            print(temp["event_theme"])
             temp["event_time"] = ftime
             sampledict[str(i+1)] = temp
         writejson(sampledict)
@@ -161,17 +167,21 @@ def calendar():
             msg = "show"
         else:
             nsampledict = pd.DataFrame(sampledict)
-            for i in range(lens):
-                nsampledict[str(i+1)]["event_date"] = nsampledict[str(i+1)]["event_date"].split("/")[1]
             nsampledict = nsampledict.transpose()
             nsampledict = nsampledict.sort_values(by=['event_date'])
-            #reset column names
             nsampledict = nsampledict.reset_index()
             nsampledict = nsampledict.drop(['index'], axis=1)
             nsampledict.index = np.arange(1, len(nsampledict) + 1)
             nsampledict.index = nsampledict.index.map(str)
             nsampledict = nsampledict.transpose()
             nsampledict = nsampledict.to_dict()
+            for i in range(lens):
+                month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+                MM,DD,YYYY = nsampledict[str(i+1)]["event_date"].split("/")
+                nsampledict[str(i+1)]["event_date"] = DD
+                nsampledict[str(i+1)]["event_month"] = month[int(MM)-1]
+            print(nsampledict)
+
         return render_template('calendar.html',avtarurl=session['image'],lens=lens,data=nsampledict,msg=msg)
     return redirect(url_for('index'))
 
@@ -180,7 +190,7 @@ def addevent():
     if 'email' in session:
         if(request.method == 'POST'):
             promptp = request.form['prompt']
-            l,fdate,ftime = nltoschedule(promptp)
+            l,fdate,ftime,color = nltoschedule(promptp)
             conn = sql.connect('users.sqlite')
             cur = conn.cursor()
             cur.execute("SELECT etitle,edate,etime FROM eve WHERE emp1 = ?",(session['email'],))
@@ -188,7 +198,7 @@ def addevent():
             for i in range(len(data)):
                 if(data[i][0] == l and data[i][1] == fdate and data[i][2] == ftime):
                     return redirect(url_for('calendar'))
-            cur.execute("INSERT INTO eve (etitle,edate,etime,emp1) VALUES (?,?,?,?)",(l,fdate,ftime,session['email']))
+            cur.execute("INSERT INTO eve (etitle,edate,etime,emp1,emp2) VALUES (?,?,?,?,?)",(l,fdate,ftime,session['email'],color))
             conn.commit()
         return redirect(url_for('calendar'))
     return redirect(url_for('index'))
