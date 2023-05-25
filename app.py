@@ -7,6 +7,8 @@ from enc import encrypt, decrypt
 import msmtp
 import socket
 from datetime import datetime
+from nertk import nltoschedule
+import pandas as pd
 
 app = Flask(__name__,static_url_path='', static_folder='frontend/static',template_folder='frontend/templates')
 app.secret_key = 'calypsoismadebyrudrashah'
@@ -38,6 +40,14 @@ def genlink(mail):
     ip_address = get_local_ip()
     url = f'http://{ip_address}:5454/reset?mail='+str(encmail).replace("b'","").replace("'","")+'&keyval='+str(keyval)
     return url
+
+def jsonc(l,fdate,ftime):
+    #conver fdate to "%m/%d/%Y"
+    return sampledict
+
+def writejson(sampledict):
+    with open('frontend/static/js/data.json', 'w') as outfile:
+        json.dump(sampledict, outfile)
 
 @app.route('/')
 @app.route('/index')
@@ -92,7 +102,7 @@ def postrud():
         else:
             flash('Email already exists', 'error')
             return render_template('register.html')
-    return msg
+    return redirect(url_for('calendar'))
 
 @app.route('/postlud', methods=['POST', 'GET'])
 def postlud():
@@ -120,7 +130,59 @@ def postlud():
 def calendar():
     if 'email' in session:
         print(session['image'])
-        return render_template('calendar.html',avtarurl=session['image'])
+        # l,fdate,ftime = nltoschedule('Classes on Instrumental Science Today at 12:56')
+        # jsonc(l,fdate)
+        conn = sql.connect('users.sqlite')
+        cur = conn.cursor()
+        cur.execute("SELECT etitle,edate,etime FROM eve WHERE emp1 = ?",(session['email'],))
+        data = cur.fetchall()
+        sampledict = dict()
+        for i in range(len(data)):
+            fdate = str(data[i][1])
+            ftime = str(data[i][2])
+            print(fdate)
+            if(fdate==""):
+                fdate = datetime.today().strftime('%d %a %b %Y')
+            if(ftime==""):
+                ftime = "All Day"
+            print(fdate)
+            l = str(data[i][0])
+            fdate = datetime.strptime(fdate, '%d %a %b %Y').strftime('%m/%d/%Y')
+            temp = dict()
+            temp["event_date"] = fdate
+            temp["event_title"] = l
+            temp["event_theme"] = "red"
+            temp["event_time"] = ftime
+            sampledict[str(i+1)] = temp
+        writejson(sampledict)
+        lens = len(sampledict)
+        nsampledict = pd.DataFrame(sampledict)
+        nsampledict = nsampledict.transpose()
+        nsampledict = nsampledict.sort_values(by=['event_date'])
+        nsampledict = nsampledict.transpose()
+        nsampledict = nsampledict.to_dict()
+        for i in range(lens):
+            nsampledict[str(i+1)]["event_date"] = nsampledict[str(i+1)]["event_date"].split("/")[1]
+        print(nsampledict)
+        return render_template('calendar.html',avtarurl=session['image'],lens=lens,data=nsampledict)
+    return redirect(url_for('index'))
+
+@app.route('/addevent', methods=['POST', 'GET'])
+def addevent():
+    if 'email' in session:
+        if(request.method == 'POST'):
+            promptp = request.form['prompt']
+            l,fdate,ftime = nltoschedule(promptp)
+            conn = sql.connect('users.sqlite')
+            cur = conn.cursor()
+            cur.execute("SELECT etitle,edate,etime FROM eve WHERE emp1 = ?",(session['email'],))
+            data = cur.fetchall()
+            for i in range(len(data)):
+                if(data[i][0] == l and data[i][1] == fdate and data[i][2] == ftime):
+                    return redirect(url_for('calendar'))
+            cur.execute("INSERT INTO eve (etitle,edate,etime,emp1) VALUES (?,?,?,?)",(l,fdate,ftime,session['email']))
+            conn.commit()
+        return redirect(url_for('calendar'))
     return redirect(url_for('index'))
 
 @app.route('/forgot', methods=['POST', 'GET'])

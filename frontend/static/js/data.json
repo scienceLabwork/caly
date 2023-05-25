@@ -1,12 +1,1 @@
-{
-    "1": {
-        "event_date": "05/05/2023",
-        "event_title": "April Fool's Day",
-        "event_theme": "blue"
-    },
-    "2": {
-        "event_date": "05/06/2023",
-        "event_title": "Rudra's Day",
-        "event_theme": "blue"
-    }
-}
+{"1": {"event_date": "05/25/2023", "event_theme": "red", "event_time": "12:56 PM", "event_title": "Classes on Instrumental Science Today at 12:56"}, "2": {"event_date": "05/28/2023", "event_theme": "red", "event_time": "12:00 AM", "event_title": "Go to school"}, "3": {"event_date": "05/26/2023", "event_theme": "red", "event_time": "04:00 AM", "event_title": "Progcode"}, "4": {"event_date": "05/25/2023", "event_theme": "red", "event_time": "All Day", "event_title": "This is prompt"}}

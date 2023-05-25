@@ -64,7 +64,8 @@ def nltoschedule(sent):
         else:
             l.append(x[0])
         i+=1
-
+    
+    print(l)
     l = ' '.join(l[::-1])
     if(date+" "+time!=" "):
         whole = parser.parse(date+" "+time)
@@ -72,33 +73,3 @@ def nltoschedule(sent):
         ftime = str(whole.strftime("%I:%M %p"))
 
     return l,fdate,ftime
-    # print("TODO: ", l)
-    # print("Set time: ",ftime)
-    # print("Set Date: ",fdate)
-
-"""
-    [{
-        event_date: new Date(2023, 3, 1),
-        event_title: "April Fool's Day",
-        event_theme: 'blue'
-    },
-    
-    {
-        event_date: new Date(2023, 9, 2),
-        event_title: "Birthday",
-        event_theme: 'red'
-    },
-    
-    {
-        event_date: new Date(2020, 3, 16),
-        event_title: "Upcoming Event",
-        event_theme: 'green'
-    }]
-"""
-
-def addtojson():
-    
-
-
-
-print(nltoschedule('Classes on Instrumental Science Today at 12:56'))
