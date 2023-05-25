@@ -9,6 +9,7 @@ import socket
 from datetime import datetime
 from nertk import nltoschedule
 import pandas as pd
+import numpy as np
 
 app = Flask(__name__,static_url_path='', static_folder='frontend/static',template_folder='frontend/templates')
 app.secret_key = 'calypsoismadebyrudrashah'
@@ -140,12 +141,10 @@ def calendar():
         for i in range(len(data)):
             fdate = str(data[i][1])
             ftime = str(data[i][2])
-            print(fdate)
             if(fdate==""):
                 fdate = datetime.today().strftime('%d %a %b %Y')
             if(ftime==""):
                 ftime = "All Day"
-            print(fdate)
             l = str(data[i][0])
             fdate = datetime.strptime(fdate, '%d %a %b %Y').strftime('%m/%d/%Y')
             temp = dict()
@@ -156,15 +155,24 @@ def calendar():
             sampledict[str(i+1)] = temp
         writejson(sampledict)
         lens = len(sampledict)
-        nsampledict = pd.DataFrame(sampledict)
-        nsampledict = nsampledict.transpose()
-        nsampledict = nsampledict.sort_values(by=['event_date'])
-        nsampledict = nsampledict.transpose()
-        nsampledict = nsampledict.to_dict()
-        for i in range(lens):
-            nsampledict[str(i+1)]["event_date"] = nsampledict[str(i+1)]["event_date"].split("/")[1]
-        print(nsampledict)
-        return render_template('calendar.html',avtarurl=session['image'],lens=lens,data=nsampledict)
+        msg = "hidden"
+        nsampledict = dict()
+        if(lens==0):
+            msg = "show"
+        else:
+            nsampledict = pd.DataFrame(sampledict)
+            for i in range(lens):
+                nsampledict[str(i+1)]["event_date"] = nsampledict[str(i+1)]["event_date"].split("/")[1]
+            nsampledict = nsampledict.transpose()
+            nsampledict = nsampledict.sort_values(by=['event_date'])
+            #reset column names
+            nsampledict = nsampledict.reset_index()
+            nsampledict = nsampledict.drop(['index'], axis=1)
+            nsampledict.index = np.arange(1, len(nsampledict) + 1)
+            nsampledict.index = nsampledict.index.map(str)
+            nsampledict = nsampledict.transpose()
+            nsampledict = nsampledict.to_dict()
+        return render_template('calendar.html',avtarurl=session['image'],lens=lens,data=nsampledict,msg=msg)
     return redirect(url_for('index'))
 
 @app.route('/addevent', methods=['POST', 'GET'])
