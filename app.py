@@ -77,7 +77,7 @@ def laernmore():
 
 @app.route('/profile')
 def profilex():
-    return render_template('profile.html')
+    return render_template('profile.html',avtarurl=session['image'],name=session['fname'],email=session['email'])
 
 @app.route('/postrud', methods=['POST', 'GET'])
 def postrud():
@@ -206,6 +206,14 @@ def addevent():
             conn.commit()
         return redirect(url_for('calendar'))
     return redirect(url_for('index'))
+
+@app.route('/deleteevent', methods=['POST', 'GET'])
+def deleteevent():
+    if method == 'POST':
+        conn = sql.connect('users.sqlite')
+        cur = conn.cursor()
+        cur.execute("DELETE FROM eve WHERE emp1 = ? and etitle = ? and edate = ? and etime = ?",(session['email'],l,fdate,ftime))
+        conn.commit()
 
 @app.route('/forgot', methods=['POST', 'GET'])
 def forgot():
