@@ -48,3 +48,11 @@ padding-bottom: 4rem;
 .h-40 {
     height: 39.7rem;
 }
+
+.red {
+    background-color: rgb(251 213 213);
+}
+
+.green {
+    background-color: #b8e5df;
+}

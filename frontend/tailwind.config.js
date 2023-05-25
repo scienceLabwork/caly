@@ -16,6 +16,7 @@ module.exports = {
         'pal1':'#D14D72',
         'pal2':'#FFABAB',
         'pal3':'#B22F59',
+        'pal4':'#FFBCBC',
       }
     }
   },
