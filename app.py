@@ -156,8 +156,9 @@ def calendar():
             temp["event_title"] = l
             temp["event_theme"] = "red"
             temp["event_month"] = ""
-            if(data[i][3]==None or data[i][3]==""):
-                temp["event_theme"] = "red"
+            col = ['red','blue','green','yellow','purple']
+            if(data[i][3]==None or data[i][3]=="" or data[i][3] not in col):
+                temp["event_theme"] = random.choice(col)
             else:
                 temp["event_theme"] = data[i][3]
             print(temp["event_theme"])
@@ -209,11 +210,16 @@ def addevent():
 
 @app.route('/deleteevent', methods=['POST', 'GET'])
 def deleteevent():
-    if method == 'POST':
+    if request.method == 'POST':
+        data = request.form
+        title = data['title']
+        email = session['email']
         conn = sql.connect('users.sqlite')
         cur = conn.cursor()
-        cur.execute("DELETE FROM eve WHERE emp1 = ? and etitle = ? and edate = ? and etime = ?",(session['email'],l,fdate,ftime))
+        cur.execute("DELETE FROM eve WHERE emp1 = ? and etitle = ?",(session['email'],title))
         conn.commit()
+        return redirect(url_for('calendar'))
+    return redirect(url_for('index'))
 
 @app.route('/forgot', methods=['POST', 'GET'])
 def forgot():
@@ -243,6 +249,7 @@ def reset():
         cur = conn.cursor()
         cur.execute("SELECT email,tstamp FROM rpass WHERE email = ? AND key = ?",(arg1,arg2))
         data = cur.fetchone()
+        print(data)
         if data is None:
             print('NO data')
             return redirect(url_for('index'))

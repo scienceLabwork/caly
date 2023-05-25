@@ -59,6 +59,7 @@ function app() {
         ],
 
         openEventModal: false,
+        openDeleteModel: false,
 
         readjson(){
             fetch('/js/data.json')
@@ -95,6 +96,12 @@ function app() {
             // open the modal
             this.openEventModal = true;
             this.event_date = new Date(this.year, this.month, date).toDateString();
+        },
+
+        todelete(date) {
+            // open the modal
+            this.openDeleteModel = true;
+            this.event_date = date;
         },
 
         addEvent() {

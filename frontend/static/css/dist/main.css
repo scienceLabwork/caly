@@ -56,6 +56,23 @@ padding-bottom: 4rem;
 .green {
     background-color: #b8e5df;
 }
+
+.purple {
+    background-color: #d8d8f7;
+}
+
+.blue {
+    background-color: #d8f7f7;
+}
+
+.orange {
+    background-color: #f7e3d8;
+}
+
+.yellow {
+    background-color: #f7f4d8;
+}
+
 .h-15 {
     height: 88vh;
   }
@@ -92,5 +109,5 @@ padding-bottom: 4rem;
   }
 
 .h-120{
-    
+
 }
