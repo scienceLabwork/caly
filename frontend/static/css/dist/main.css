@@ -91,6 +91,6 @@ padding-bottom: 4rem;
     }
   }
 
-.h-120{
-    
-}
+  .rounded-4xl {
+    border-radius: 3rem;
+  }
