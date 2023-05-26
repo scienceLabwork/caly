@@ -2851,10 +2851,6 @@ input[type="range"]::-ms-fill-lower {
   border-radius: 0.25rem;
 }
 
-.rounded-2xl {
-  border-radius: 1rem;
-}
-
 .rounded-\[0\.25rem\] {
   border-radius: 0.25rem;
 }
