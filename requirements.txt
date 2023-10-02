@@ -1,0 +1,10 @@
+base64
+hashlib
+pycryptodome
+Flask
+msmtplib
+socket
+datetime
+nertk
+pandas
+numpy
