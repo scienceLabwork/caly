@@ -1,5 +1,6 @@
 # Caly - Prompt Based calender
 With Caly, each day becomes an opportunity for inspiration and achievement. Caly's thoughtfully crafted prompts are designed to spark your imagination, encourage reflection, and provide guidance for meaningful actions.
+<br><br>
 ![Caly](/demo_screnshots/caly2.png)
 
 ## Features
